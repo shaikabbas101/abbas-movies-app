@@ -1,0 +1,28 @@
+.similar-movie-img {
+  width: 90px;
+  height: 100px;
+  border-radius: 15px;
+}
+.similar-movie-name {
+  color: #ffffff;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  font-family: 'Roboto';
+  max-width: 80px;
+}
+@media screen and (min-width: 768px) {
+  .similar-movie-img {
+    width: 250px;
+    height: 150px;
+    border-radius: 15px;
+  }
+  .movie-name {
+    color: #ffffff;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'Roboto';
+    max-width: 220px;
+  }
+}

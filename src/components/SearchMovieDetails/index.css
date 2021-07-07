@@ -1,0 +1,27 @@
+.search-movie-img {
+  width: 100px;
+  border-radius: 15px;
+}
+.search-movie-name {
+  color: #ffffff;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: 'Roboto';
+  max-width: 100px;
+}
+@media screen and (min-width: 768px) {
+  .search-movie-img {
+    width: 250px;
+    height: 150px;
+    border-radius: 15px;
+  }
+  .search-movie-name {
+    color: #ffffff;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'Roboto';
+    max-width: 220px;
+  }
+}

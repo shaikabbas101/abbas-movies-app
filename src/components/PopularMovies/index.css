@@ -1,0 +1,12 @@
+.popular-page-bg-container {
+  background-color: #131313;
+  min-height: 100vh;
+}
+.popular-movie-details-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}

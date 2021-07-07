@@ -1,0 +1,81 @@
+.background-img-container {
+  background-image: url('https://res.cloudinary.com/dkr26vkii/image/upload/v1625569206/wp2581913-man-of-steel-wallpaper_1_y1ltkr.jpg');
+  background-size: cover;
+  height: 83vh;
+}
+.home-movie-heading {
+  margin-top: 96px;
+  margin-bottom: 24px;
+  font-family: 'HK Grotesk';
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 62px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #ffffff;
+  margin-top: 20px;
+}
+.home-movie-description {
+  width: 80%;
+  font-family: HK Grotesk;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+}
+.trending-top-rated-original-container {
+  background-color: #131313;
+  min-height: 100vh;
+}
+.side-heading {
+  color: #ffffff;
+  padding-top: 32px;
+  font-family: 'HK Grotesk';
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 42px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #131313;
+  height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .background-img-container {
+    background-image: url('https://res.cloudinary.com/dkr26vkii/image/upload/v1625407503/Image_gc8i41.png');
+    background-size: cover;
+    height: 83vh;
+  }
+  .home-movie-heading {
+    font-size: 64px;
+  }
+  .home-movie-description {
+    font-size: 20px;
+    width: 50%;
+  }
+
+  .side-heading {
+    color: #ffffff;
+    padding-top: 32px;
+    font-family: 'HK Grotesk';
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 42px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #131313;
+    height: 100vh;
+  }
+}

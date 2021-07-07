@@ -1,0 +1,28 @@
+.popular-movie-img {
+  width: 120px;
+  height: 80px;
+  border-radius: 15px;
+}
+.popular-movie-name {
+  color: #ffffff;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  font-family: 'Roboto';
+  max-width: 100px;
+}
+@media screen and (min-width: 768px) {
+  .popular-movie-img {
+    width: 250px;
+    height: 150px;
+    border-radius: 15px;
+  }
+  .popular-movie-name {
+    color: #ffffff;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'Roboto';
+    max-width: 220px;
+  }
+}

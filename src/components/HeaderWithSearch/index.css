@@ -1,0 +1,22 @@
+.nav-background-with-search-bar {
+  background-color: #131313;
+}
+.nav-logo {
+  width: 100px;
+}
+#movies-nav-links {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'Roboto';
+}
+.user-icon {
+  width: 28px;
+  border-radius: 15px;
+  margin-left: 15px;
+}
+.search-icon {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 20px;
+}

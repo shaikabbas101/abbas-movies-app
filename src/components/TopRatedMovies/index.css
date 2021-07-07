@@ -1,0 +1,21 @@
+.top-rated-movie-img {
+  width: 85%;
+  border-radius: 10px;
+}
+.movie-name {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: 'Roboto';
+  max-width: 220px;
+}
+@media screen and (min-width: 768px) {
+  .top-rated-movie-img {
+    border-radius: 15px;
+  }
+  .movie-name {
+    text-align: center;
+    font-size: 14px;
+    max-width: 220px;
+  }
+}
