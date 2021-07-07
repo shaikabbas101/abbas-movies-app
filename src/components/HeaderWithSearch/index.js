@@ -51,6 +51,13 @@ const HeaderWithSearch = props => {
               >
                 Popular
               </Link>
+              <Link
+                to="/movies-account"
+                className="nav-link"
+                id="movies-nav-links"
+              >
+                MyAccount
+              </Link>
             </div>
             <div className="ml-auto d-none d-lg-flex">
               <form className="form-inline my-2 my-lg-0 ">

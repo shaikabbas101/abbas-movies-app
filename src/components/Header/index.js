@@ -41,6 +41,13 @@ const Header = () => (
             >
               Popular
             </Link>
+            <Link
+              to="/movies-account"
+              className="nav-link"
+              id="movies-nav-links"
+            >
+              MyAccount
+            </Link>
           </div>
           <div className="ml-auto d-none d-lg-flex">
             <Link to="/search-movies">
