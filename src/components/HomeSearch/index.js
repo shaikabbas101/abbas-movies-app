@@ -98,7 +98,6 @@ class HomeSearch extends Component {
     const searchResults = searchMovies.filter(eachMovie =>
       eachMovie.title.toLowerCase().includes(searchInput.toLowerCase()),
     )
-    // console.log(searchMovies)
     const isNoResults = searchResults.length === 0
     return (
       <>

@@ -1,4 +1,3 @@
-// import {Link} from 'react-router-dom'
 import './index.css'
 
 const FooterSection = () => (
@@ -20,5 +19,4 @@ const FooterSection = () => (
     <p className="text-white mt-3">Contact Us</p>
   </div>
 )
-
 export default FooterSection

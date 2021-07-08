@@ -40,7 +40,6 @@ class PopularMovies extends Component {
     const response = await fetch(url)
     const data = await response.json()
     const formattedData = this.getFormattedData(data)
-    console.log(data)
     this.setState({
       popularMovies: formattedData,
       isLoading: false,

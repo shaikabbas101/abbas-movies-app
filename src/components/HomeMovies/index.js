@@ -83,7 +83,6 @@ class HomeMovies extends Component {
     const {params} = match
     const {id} = params
     const updateId = newId === 0 ? id : newId
-    console.log(updateId)
     const url = `https://api.themoviedb.org/3/movie/${updateId}/similar?api_key=a709ef5cf669a418dea9126a1637e743&language=en-US&page=1`
     const response = await fetch(url)
     const data = await response.json()
@@ -151,7 +150,6 @@ class HomeMovies extends Component {
         backgroundImage: `url(${imgUrl2})`,
       },
     }
-    console.log(uniqueMovieDetails)
     return (
       <>
         <StyleRoot>

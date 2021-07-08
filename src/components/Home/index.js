@@ -98,7 +98,6 @@ class Home extends Component {
       'https://api.themoviedb.org/3/discover/tv?api_key=a709ef5cf669a418dea9126a1637e743'
     const response = await fetch(url)
     const data = await response.json()
-    console.log(data)
     const formattedData = data.results.map(movie => ({
       backdropPath: movie.backdrop_path,
       firstAirDate: movie.first_air_date,

@@ -6,7 +6,7 @@ const SearchMovieDetails = props => {
   const {posterPath, id, title} = movieDetails
 
   return (
-    <Link to={`/search-movies/${id}`} target="_blank">
+    <Link to={`/search-movies/${id}`}>
       <li>
         <img
           alt="search_movies_image"
