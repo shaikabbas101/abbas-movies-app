@@ -9,7 +9,7 @@ import SimilarMovies from '../SimilarMovies'
 import './index.css'
 
 class HomeMovies extends Component {
-  state = {uniqueMovieDetails: [], similarMovies: [], isLoading: true}
+  state = {uniqueMovieDetails: [], similarMovies: [], newId: 0, isLoading: true}
 
   componentDidMount() {
     this.getUniqueMovie()
@@ -64,28 +64,34 @@ class HomeMovies extends Component {
     }))
 
   getUniqueMovie = async () => {
+    const {newId} = this.state
     const {match} = this.props
     const {params} = match
     const {id} = params
-    const url = `https://api.themoviedb.org/3/movie/${id}?api_key=a709ef5cf669a418dea9126a1637e743&language=en-US`
+    const updateId = newId === 0 ? id : newId
+    const url = `https://api.themoviedb.org/3/movie/${updateId}?api_key=a709ef5cf669a418dea9126a1637e743&language=en-US`
 
     const response = await fetch(url)
     const data = await response.json()
     const formattedData = this.getFormattedData(data)
-    this.setState({uniqueMovieDetails: formattedData})
+    this.setState({uniqueMovieDetails: formattedData, newId: id})
   }
 
   getSimilarMovies = async () => {
+    const {newId} = this.state
     const {match} = this.props
     const {params} = match
     const {id} = params
-    const url = `https://api.themoviedb.org/3/movie/${id}/similar?api_key=a709ef5cf669a418dea9126a1637e743&language=en-US&page=1`
+    const updateId = newId === 0 ? id : newId
+    console.log(updateId)
+    const url = `https://api.themoviedb.org/3/movie/${updateId}/similar?api_key=a709ef5cf669a418dea9126a1637e743&language=en-US&page=1`
     const response = await fetch(url)
     const data = await response.json()
     const formattedData = this.getSimilarMovieFormattedDat(data)
     this.setState({
       similarMovies: formattedData,
       isLoading: false,
+      newId: id,
     })
   }
 
@@ -95,15 +101,23 @@ class HomeMovies extends Component {
     </div>
   )
 
+  changeMovieId = idVal => {
+    this.setState({newId: idVal}, this.getUniqueMovie)
+    this.setState({newId: idVal}, this.getSimilarMovies)
+  }
+
   renderMostLikeThisMovies = () => {
     const {similarMovies} = this.state
-    console.log(similarMovies)
     return (
       <>
         <h1 className="side-heading">Most Liked this</h1>
-        <div className="similar-movies-container">
+        <div className="similar-movies-container pt-3 pb-5">
           {similarMovies.map(eachMovie => (
-            <SimilarMovies similarMovieDetails={eachMovie} key={eachMovie.id} />
+            <SimilarMovies
+              similarMovieDetails={eachMovie}
+              updateId={this.changeMovieId}
+              key={eachMovie.id}
+            />
           ))}
         </div>
       </>

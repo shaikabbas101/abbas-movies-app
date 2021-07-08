@@ -38,28 +38,29 @@ class HomeSearch extends Component {
   onIncrease = () => {
     const {pageNo} = this.state
     if (pageNo < 25) {
-      this.setState(prevState => ({
-        pageNo: prevState.pageNo + 1,
-        isLoading: true,
-      }))
-      this.getSearchMovies()
+      this.setState(
+        prevState => ({
+          pageNo: prevState.pageNo + 1,
+        }),
+        this.getSearchMovies,
+      )
     }
   }
 
   onDecrease = () => {
     const {pageNo} = this.state
     if (pageNo > 1) {
-      this.setState(prevState => ({
-        pageNo: prevState.pageNo - 1,
-        isLoading: true,
-      }))
-      this.getSearchMovies()
+      this.setState(
+        prevState => ({
+          pageNo: prevState.pageNo - 1,
+        }),
+        this.getSearchMovies,
+      )
     }
   }
 
   getSearchMovies = async () => {
     const {pageNo} = this.state
-    console.log(pageNo)
     const url = `https://api.themoviedb.org/3/search/movie?api_key=a709ef5cf669a418dea9126a1637e743&language=en-US&query=Fast&page=${pageNo}`
     const response = await fetch(url)
     const data = await response.json()

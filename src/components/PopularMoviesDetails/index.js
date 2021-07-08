@@ -6,7 +6,7 @@ const PopularMoviesDetails = props => {
   const {posterPath, id, title} = popularMovieDetails
 
   return (
-    <Link to={`/popular-movies/${id}`} target="_blank">
+    <Link to={`/popular-movies/${id}`}>
       <div className="mr-3">
         <img
           alt="popular_movies_image"
